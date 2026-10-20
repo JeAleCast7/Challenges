@@ -4,7 +4,8 @@ public class Menu {
     public static String menu() {
         return "=======================================================\n"
              + "                                                       \n"
-             + "           BIENVENIDO A LA BIBLIOTECA DISTRITAL!!!     \n"
+             + "          Bienvenid@ a la Biblioteca Distrital         \n"
+             + "               Francisco Jose de Caldas                \n"
              + "                                                       \n"
              + "=======================================================\n";
     }
@@ -12,7 +13,7 @@ public class Menu {
     public static String menuIngresar(){
         return "=======================================================\n"
              + "                                                       \n"
-             + "      YA ERES MIEMBRO A LA BIBLIOTECA?                 \n"
+             + "      Ya eres miembro de la Biblioteca?                 \n"
              + "                                                       \n"
              + "=======================================================\n";
     }
@@ -20,8 +21,24 @@ public class Menu {
     public static String menuInicioSesion(){
         return "==============================================================\n"
              + "                                                              \n"
-             + "      VAS A INICIAR SESION                                    \n"
+             + "      Vas a Iniciar Sesion                                    \n"
              + "                                                              \n"
              + "==============================================================\n";
+    }
+    
+    public static String menuRegistro(){
+        return "==============================================================\n"
+             + "                                                              \n"
+             + "      Porfavor llena el formulario de registro                \n"
+             + "                                                              \n"
+             + "==============================================================\n";
+    }
+    
+    public static String menuPP(){
+        return "===============================================================================================================\n"
+             + "                                                              \n"
+             + "      Bienvenid@ \n"
+             + "                                                              \n"
+             + "===============================================================================================================\n";
     }
 }

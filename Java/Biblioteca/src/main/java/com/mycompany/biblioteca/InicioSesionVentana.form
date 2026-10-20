@@ -32,12 +32,10 @@
               <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="txtPwd" pref="179" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="btnIngresar" pref="179" max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="49" max="-2" attributes="0"/>
-                      <Component id="txtCorreo" max="32767" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnIngresar" pref="179" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="txtCorreo" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>

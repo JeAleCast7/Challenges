@@ -15,9 +15,29 @@ public class Ingresar {
                 return rs.next();
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
+        }   catch (SQLException e) {
+                e.printStackTrace();
+                return false;
         }
     }
+    
+    public boolean registrar(int cedula, String nombre, String correo, String pwd){
+        String insertar = "INSERT INTO usuarios (cedula, nombre, correo, pwd) VALUES (?, ?, ?, ?)";
+        
+        try (Connection con = Conexion.getConexion();
+             PreparedStatement ps = con.prepareStatement(insertar)) {
+                 
+            ps.setInt   (1, cedula);
+            ps.setString(2, nombre);
+            ps.setString(3, correo);
+            ps.setString(4, pwd);
+            
+            return ps.executeUpdate() > 0;            
+             
+        }   catch (SQLException e){
+                e.printStackTrace();
+                return false;
+            } 
+    }
 }
+

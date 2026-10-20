@@ -98,13 +98,15 @@ public class InicioSesionVentana extends javax.swing.JFrame {
         
         Ingresar ingresar = new Ingresar();
     if (ingresar.validar(correo, pwd)) {
-        JOptionPane.showMessageDialog(this, "Bienvenido");
+        new PPVentana().setVisible(true);
+        this.dispose();
         // new VentanaPrincipal().setVisible(true);
         // this.dispose();
     } else {
         JOptionPane.showMessageDialog(this, "Credenciales incorrectas",
                 "Error", JOptionPane.ERROR_MESSAGE);
-    }
+        }
+        
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void txtPwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwdActionPerformed
