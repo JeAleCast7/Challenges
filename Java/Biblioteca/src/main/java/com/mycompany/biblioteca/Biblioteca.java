@@ -1,29 +1,18 @@
 /*
  * Visit my Repo:https://github.com/JeAleCast7
  */
-
 package com.mycompany.biblioteca;
-import java.util.Scanner;
-
+import javax.swing.SwingUtilities;
 
 public class Biblioteca {
-static Scanner sc = new Scanner(System.in);
-static int opc;
+    /*
 static String correo = "";
 static String pwd = "";
-    
+    */
     public static void main(String[] args) {
-        menu();
+        SwingUtilities.invokeLater(() -> new BibliotecaVentana().setVisible(true));
     }
-    public static void menu(){
-        System.out.println("==============================================");
-        System.out.println("    BIENVENIDO A LA BILBLIOTECA DISTRITAL     ");
-        System.out.println("==============================================");
-        System.out.println("1. INGRESAR");
-        System.out.println("2. CONSULTA");
-        System.out.println("3. SALIR \n");
-        opc = sc.nextInt();
-        
+        /*
         switch (opc){
             case 1: 
                 System.out.println("Ya eres miembro?");
@@ -52,7 +41,7 @@ static String pwd = "";
                     case 2:
                 };
         }
+        */
     }
     
 
-}

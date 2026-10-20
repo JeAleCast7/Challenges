@@ -2,7 +2,6 @@ package com.mycompany.biblioteca;
 import java.sql.*;
 
 public class Ingresar {
-    
     public boolean validar(String correo, String pwd){
         String consulta = "SELECT 1 FROM usuarios WHERE correo = ? AND pwd = ?";
 

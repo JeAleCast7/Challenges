@@ -1,4 +1,9 @@
 com\mycompany\biblioteca\Biblioteca.class
+com\mycompany\biblioteca\IngresarVentana.class
 com\mycompany\biblioteca\Prestamo.class
+com\mycompany\biblioteca\Menu.class
+com\mycompany\biblioteca\BibliotecaVentana.class
+com\mycompany\biblioteca\ConsultarVentana.class
 com\mycompany\biblioteca\Conexion.class
+com\mycompany\biblioteca\InicioSesionVentana.class
 com\mycompany\biblioteca\Ingresar.class
