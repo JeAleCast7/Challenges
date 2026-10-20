@@ -1,4 +1,7 @@
+//These are exercises from Codedex.
+
 package com.mycompany.codedex;
+
 
 public class Codedex {
 
@@ -17,7 +20,14 @@ public class Codedex {
         //Exercise 5
         ID_Card.id_card();
         
-        //Exercise  6
+        //Exercise 6
         Operation0.Operation_0();
+        
+        //Exercise 7
+        //EscapeRoom.Escape_Room();
+        
+        //Exercise 8
+        ClubPenguin.Club_Penguin();
     }
+    
 }
