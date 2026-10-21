@@ -21,7 +21,26 @@ public class Ingresar {
         }
     }
     
-    public boolean registrar(int cedula, String nombre, String correo, String pwd){
+    public boolean consultaPrevia(int cedula){
+        String consultaprevia = "SELECT 1 FROM usuarios WHERE cedula = ?";
+
+        try (Connection con = Conexion.getConexion();
+             PreparedStatement ps = con.prepareStatement(consultaprevia)) {
+
+            ps.setInt(1, cedula);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                return rs.next();
+            }
+
+        }   catch (SQLException e) {
+                e.printStackTrace();
+                return false;
+        }
+        
+    }
+    
+    public boolean registrar(int cedula, String nombre, String correo, String pwd){     
         String insertar = "INSERT INTO usuarios (cedula, nombre, correo, pwd) VALUES (?, ?, ?, ?)";
         
         try (Connection con = Conexion.getConexion();

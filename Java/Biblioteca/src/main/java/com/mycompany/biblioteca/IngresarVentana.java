@@ -25,6 +25,7 @@ public class IngresarVentana extends javax.swing.JFrame {
         lbltextologin = new javax.swing.JLabel();
         btnIniciaSesion = new javax.swing.JButton();
         btnRegistrarme = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,6 +37,9 @@ public class IngresarVentana extends javax.swing.JFrame {
         btnRegistrarme.setText("Registrarme");
         btnRegistrarme.addActionListener(this::btnRegistrarmeActionPerformed);
 
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(this::btnVolverActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -45,9 +49,12 @@ public class IngresarVentana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbltextologin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnIniciaSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnRegistrarme, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnIniciaSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnRegistrarme, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnVolver))
                         .addGap(0, 8, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -60,7 +67,9 @@ public class IngresarVentana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnIniciaSesion)
                     .addComponent(btnRegistrarme))
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addComponent(btnVolver)
+                .addContainerGap())
         );
 
         pack();
@@ -77,6 +86,12 @@ public class IngresarVentana extends javax.swing.JFrame {
         new RegistroVentana().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRegistrarmeActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+        new BibliotecaVentana().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -103,6 +118,7 @@ public class IngresarVentana extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciaSesion;
     private javax.swing.JButton btnRegistrarme;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel lbltextologin;
     // End of variables declaration//GEN-END:variables
 }
