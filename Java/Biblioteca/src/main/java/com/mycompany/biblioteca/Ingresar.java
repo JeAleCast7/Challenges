@@ -3,7 +3,7 @@ import java.sql.*;
 
 public class Ingresar {
     public boolean validar(String correo, String pwd){
-        String consulta = "SELECT 1 FROM usuarios WHERE correo = ? AND pwd = ?";
+        String consulta = "SELECT cedula, nombre FROM usuarios WHERE correo = ? AND pwd = ?";
 
         try (Connection con = Conexion.getConexion();
              PreparedStatement ps = con.prepareStatement(consulta)) {
@@ -12,7 +12,12 @@ public class Ingresar {
             ps.setString(2, pwd);
 
             try (ResultSet rs = ps.executeQuery()) {
-                return rs.next();
+                if (rs.next()){
+                    Sesion.iniciar(rs.getInt("cedula"), rs.getString("nombre"));
+                    return true;
+                }
+                
+                return false;
             }
 
         }   catch (SQLException e) {

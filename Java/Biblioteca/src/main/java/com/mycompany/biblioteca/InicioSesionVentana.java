@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 public class InicioSesionVentana extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InicioSesionVentana.class.getName());
-
+    
     public InicioSesionVentana() {
         initComponents();
         
@@ -126,8 +126,8 @@ public class InicioSesionVentana extends javax.swing.JFrame {
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
-        new IngresarVentana().setVisible(true);
-        this.dispose();
+        new IngresarVentana(this).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     /**

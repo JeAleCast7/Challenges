@@ -69,13 +69,13 @@ public class BibliotecaVentana extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
-        new IngresarVentana().setVisible(true);
-        this.dispose();
+        new IngresarVentana(this).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
         // TODO add your handling code here:
-        new ConsultarVentana().setVisible(true);
+        new PPVentana().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnConsultaActionPerformed
 

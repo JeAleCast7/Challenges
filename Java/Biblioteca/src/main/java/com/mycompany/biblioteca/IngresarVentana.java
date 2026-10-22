@@ -4,7 +4,10 @@ public class IngresarVentana extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(IngresarVentana.class.getName());
 
-    public IngresarVentana() {
+    private javax.swing.JFrame ventanaAnterior;
+    public IngresarVentana(javax.swing.JFrame ventanaAnterior) {
+        
+        this.ventanaAnterior = ventanaAnterior;
         initComponents();
         
         //MY CODE FROM HERE
@@ -89,7 +92,7 @@ public class IngresarVentana extends javax.swing.JFrame {
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         // TODO add your handling code here:
-        new BibliotecaVentana().setVisible(true);
+        ventanaAnterior.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
 
@@ -112,7 +115,7 @@ public class IngresarVentana extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new IngresarVentana().setVisible(true));
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

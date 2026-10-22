@@ -6,8 +6,8 @@ import javax.swing.SwingUtilities;
 
 public class Biblioteca {
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new //BibliotecaVentana()
-        PPVentana().setVisible(true));
+        SwingUtilities.invokeLater(() -> new BibliotecaVentana().setVisible(true));
+        //PPVentana()
     }  
 }
     
