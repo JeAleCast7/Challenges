@@ -18,7 +18,7 @@ public class Sesion {
         logueado = false;
     }
     
-    public static boolean estaLogueado(){return logueado;}
+    public static boolean estaLogueado() {return logueado;}
     public static int getCedula()        {return cedula;}
     public static String getNombre()     {return nombre;}
     

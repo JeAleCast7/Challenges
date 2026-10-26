@@ -6,7 +6,7 @@ matrices, vectores
 */
 package com.mycompany.jesusykeqho;
 import java.util.Scanner;
-//import javax.swing.SwingUtilities;
+import javax.swing.SwingUtilities;
 
 public class JesusyKeqho {
 // static is for use the variable globally otherwise the code won't reconginze it

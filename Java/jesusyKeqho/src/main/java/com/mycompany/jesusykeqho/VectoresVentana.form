@@ -28,16 +28,12 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblMenuVectores" pref="395" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblOutput" min="-2" pref="164" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="txtInput" min="-2" pref="80" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnAgregarVector" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="txtInput" min="-2" pref="80" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btnAgregarVector" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
+                  <Component id="lblOutput" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -53,9 +49,9 @@
                   <Component id="txtInput" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAgregarVector" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="lblOutput" pref="105" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+              <Component id="lblOutput" min="-2" pref="109" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -75,11 +71,11 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarVectorActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblOutput">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

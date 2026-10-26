@@ -35,6 +35,7 @@ public class MenuVentana extends javax.swing.JFrame {
         btnVectores.addActionListener(this::btnVectoresActionPerformed);
 
         btnMatrices.setText("2. Matrices");
+        btnMatrices.addActionListener(this::btnMatricesActionPerformed);
 
         btnSalir.setText("3. Salir");
 
@@ -76,6 +77,12 @@ public class MenuVentana extends javax.swing.JFrame {
         new VectoresVentana().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnVectoresActionPerformed
+
+    private void btnMatricesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMatricesActionPerformed
+        // TODO add your handling code here:
+        new MatrizVentana().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMatricesActionPerformed
 
     /**
      * @param args the command line arguments

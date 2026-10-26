@@ -6,7 +6,7 @@ public class VectoresVentana extends javax.swing.JFrame {
 
     public VectoresVentana() {
         initComponents();
-        
+        Logica vector = new Logica();
         String bienvenida = Menu.menuVector().replace("\n","<br>");
         lblMenuVectores.setText("<html>" + bienvenida + "</html>");
         setLocationRelativeTo(null);
@@ -33,8 +33,7 @@ public class VectoresVentana extends javax.swing.JFrame {
         txtInput.addActionListener(this::txtInputActionPerformed);
 
         btnAgregarVector.setText("Agregar");
-
-        lblOutput.setText("jLabel1");
+        btnAgregarVector.addActionListener(this::btnAgregarVectorActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -45,13 +44,11 @@ public class VectoresVentana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblMenuVectores, javax.swing.GroupLayout.DEFAULT_SIZE, 395, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtInput, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnAgregarVector)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(txtInput, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnAgregarVector)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(lblOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -63,9 +60,9 @@ public class VectoresVentana extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAgregarVector))
-                .addGap(26, 26, 26)
-                .addComponent(lblOutput, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(24, 24, 24)
+                .addComponent(lblOutput, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -73,9 +70,16 @@ public class VectoresVentana extends javax.swing.JFrame {
 
     private void txtInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInputActionPerformed
         // TODO add your handling code here:
-        int vec = Integer.parseInt(txtInput.getText());
+        //int vec = Integer.parseInt(txtInput.getText());
         
     }//GEN-LAST:event_txtInputActionPerformed
+
+    private void btnAgregarVectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarVectorActionPerformed
+        // TODO add your handling code here:
+        int vec = Integer.parseInt(txtInput.getText());
+        lblOutput.setText("Valor de posicion" + vec + "\n" );
+        
+    }//GEN-LAST:event_btnAgregarVectorActionPerformed
 
     /**
      * @param args the command line arguments
